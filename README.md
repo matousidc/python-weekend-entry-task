@@ -18,7 +18,7 @@ Python script, that for given flight data prints out a structured list of all fl
 | `bags`        | integer | Number of requested bags.                                                         | Optional (defaults to 0)     |
 | `returns`     | integer | Finds first available flight combination back after specified number of days.     | Optional (defaults to False) |
 
-#### Output
+### Output
 The output is a json-compatible structured list of trips sorted by price. The trip has the following schema:
 | Field          | Description                                                   |
 |----------------|---------------------------------------------------------------|
