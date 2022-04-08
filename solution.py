@@ -141,10 +141,10 @@ def searching(data_list: list[dict], start: str, end: str) -> list:
                 trips.append([i])
 
     i = 0
-    while i < len(trips):
+    while trips:
         departure_list = departures(trips[i], data_list)
         if not departure_list:
-            i += 1
+            trips.pop(i)
         else:
             for j in departure_list:
                 if j['destination'] == end:
@@ -152,7 +152,6 @@ def searching(data_list: list[dict], start: str, end: str) -> list:
                 else:
                     trips.append([*trips[i], j])
             trips.pop(i)
-            i = 0
     return results
 
 
